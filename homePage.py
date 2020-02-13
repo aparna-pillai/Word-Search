@@ -26,7 +26,7 @@ class Home_page(Frame):
               fg="firebrick3").grid(row=1, column=1, sticky=N)
 
         Label(self,
-              text="Puzzles", font="Courier 40 bold", bg="orange2",
+              text="Can you solve them all?", font="Courier 20 italic", bg="orange2",
               fg="firebrick3").grid(row=2, column=1, sticky=N)
 
         Label(self,
