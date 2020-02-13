@@ -31,20 +31,32 @@ class Home_page(Frame):
              fg="firebrick3").grid(row=2, column=1, sticky=N)
 
        Label(self,
-             text="Slogan", font="Courier 20",bg="orange2",
+             text="Slogan", font="Courier 30",bg="orange2",
              fg="firebrick4").grid(row=3, column=1, sticky=N)
 
-       Button(self, text="Word Search",
-              font="Courier 18", bd=5, command=self.wordSearch
-              ).grid(row=4, column=1, sticky=N)
+       Label(self, text="", bg="orange2",
+             ).grid(row=4, column=2, sticky=N)
 
-       Button(self, text="Sudoku",
-              font="Courier 18", bd=5, command=self.Sudoku
+       Button(self, text="Word Search",bg="orange2", fg="goldenrod",
+              font="Courier 25", bd=5, command=self.wordSearch
               ).grid(row=5, column=1, sticky=N)
 
-       Button(self, text="Crossword",
-              font="Courier 18", bd=5, command=self.cross_word
-              ).grid(row=6, column=1, sticky=N)
+       Label(self, text="", bg="orange2",
+             ).grid(row=6, column=2, sticky=N)
+
+       Button(self, text="Sudoku",bg="orange2", fg="goldenrod",
+              font="Courier 25", bd=5, command=self.Sudoku
+              ).grid(row=7, column=1, sticky=N)
+
+       Label(self, text="", bg="orange2",
+             ).grid(row=8, column=2, sticky=N)
+
+       Button(self, text="Crossword",bg="orange2", fg="goldenrod",
+              font="Courier 25", bd=5, command=self.cross_word
+              ).grid(row=10, column=1, sticky=N)
+
+       Label(self, text="", bg="orange2",
+             ).grid(row=11, column=2, sticky=N)
 
    def wordSearch(self):
        pass
