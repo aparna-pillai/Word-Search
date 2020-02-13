@@ -19,7 +19,8 @@ class Game_Manager(object):
         pass
 
     def crossword(self):
-        pass
+        self.current_screen.destroy()
+        self.ron=Cross_Word
 
 
 def main():
