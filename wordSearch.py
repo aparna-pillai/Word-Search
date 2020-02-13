@@ -1,9 +1,9 @@
 from tkinter import *
 
-
 class Word_Search(Frame):
-   def __init__(self, master):
+   def __init__(self, master,next_screen):
        """Initialize Frame."""
+       self.next_screen=next_screen
        super(Word_Search, self).__init__(master,background="orange2")
        self.grid()
        self.choosing_widgets()
@@ -32,8 +32,5 @@ class Word_Search(Frame):
    def load_file(self):
        file_name=self.file_ent.get()
        text_file = open(file_name, "r")
-       for line in text_file:
-           print(line)
-
-
+       self.next_screen(text_file)
 
