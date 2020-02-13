@@ -11,8 +11,6 @@ class Home_page(Frame):
        self.create_widgets()
 
    def create_widgets(self):
-       """Create widgets to get story information and to display story."""
-       # create instruction label
        Label(self, text="",bg="orange2"
              ).grid(row=0, column=0, sticky=N)
 
@@ -47,24 +45,8 @@ class Home_page(Frame):
               ).grid(row=6, column=1, sticky=N)
 
    def wordSearch(self):
-       pass
+       self.word_search()
    def Sudoku(self):
-       pass
+       self.sudoku()
    def cross_word(self):
-       pass
-
-
-       # Button(self, text="Play",
-       #        font="Courier 23", bd=5, command=self.single_player
-       #        ).grid(row=3, column=1, sticky=N)
-       #
-       # Label(self, text="", bg = "LightSteelBlue2"
-       #       ).grid(row=4, column=1, sticky=N)
-       #
-       # Button(self, text="Instructions",
-       #        font="Courier 23", bd=5,
-       #        command=self.instructions
-       #        ).grid(row=5, column=1, sticky=N)
-       #
-       # Label(self, text="", bg="LightSteelBlue2"
-       #       ).grid(row=6, column=1, sticky=N)
+       self.crossword()
