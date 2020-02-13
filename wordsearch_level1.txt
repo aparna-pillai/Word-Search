@@ -4,13 +4,11 @@ evil
 thestral
 darkness
 
--   d   a   r   k   n   e   s   s   -
--   -   -   -   -   -   -   -   -   -
-l   a   r   t   s   e   h   t   -   -
--   -   -   -   -   -   -   -   -   -
--   -   p   r   o   p   h   e   c   y
--   -   -   -   -   -   -   -   -   -
--   -   -   -   -   -   -   -   -   -
--   -   -   -   -   -   -   -   -   -
--   -   -   l   i   v   e   -   -   -
--   -   x   i   n   e   o   h   p   -
+P   -   -   -   -   -   -   -   -   -   -   -
+H   D   A   R   K   N   E   S   S   -   -   -
+O   -   -   -   -   -   -   -   -   -   -   -
+E   -   P   R   O   P   H   E   C   Y   -   -
+N   -   E   V   I   L   -   -   -   -   -   -
+I   -   -   -   -   -   -   -   -   -   -   -
+X   -   -   -   -   -   -   -   -   -   -   -
+-   -   T   H   E   S   T   R   A   L   -   -
