@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 class Word_Search(Frame):
    def __init__(self, master):
        """Initialize Frame."""
