@@ -1,7 +1,7 @@
 import tkinter
 from homePage import Home_page
 from wordSearch import Word_Search
-from sudokuScreen import Sudoku
+from sudoku import Sudoku
 
 class Game_Manager(object):
     def __init__(self):
