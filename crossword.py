@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 class Cross_Word(Frame):
     def __init__(self, master):
         """Initialize Frame."""
