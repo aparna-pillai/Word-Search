@@ -1,6 +1,7 @@
 import tkinter
 from homePage import Home_page
 from wordSearch import Word_Search
+from sudokuScreen import Sudoku
 
 class Game_Manager(object):
     def __init__(self):
@@ -16,7 +17,8 @@ class Game_Manager(object):
         self.harry = Word_Search(self.root)
 
     def sudoku(self):
-        pass
+        self.current_screen.destroy()
+        self.hermione = Sudoku(self.root)
 
     def crossword(self):
         pass
