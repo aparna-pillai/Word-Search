@@ -2,6 +2,7 @@ import tkinter
 from homePage import Home_page
 from wordSearch import Word_Search
 from sudoku import Sudoku
+from real_word_search import Word_Search2
 
 class Game_Manager(object):
     def __init__(self):
@@ -14,15 +15,21 @@ class Game_Manager(object):
 
     def word_search(self):
         self.current_screen.destroy()
-        self.harry = Word_Search(self.root)
+        self.harry = Word_Search(self.root,self.word_search2)
+
+    def word_search2(self, text_file):
+        self.harry.destroy()
+        self.albus=Word_Search2(self.root, text_file)
 
     def sudoku(self):
         self.current_screen.destroy()
         self.hermione = Sudoku(self.root)
 
     def crossword(self):
-        self.current_screen.destroy()
-        self.ron=Cross_Word
+        pass
+
+        # self.current_screen.destroy()
+        # self.ron=Cross_Word
 
 
 def main():
