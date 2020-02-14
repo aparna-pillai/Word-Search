@@ -13,6 +13,13 @@ class Word_Search2(Frame):
     def create_widgets(self):
         letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
                        "T", "U", "V", "W", "X", "Y", "Z"]
+        lowerr_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
+                       "t", "u", "v", "w", "x", "y", "z"]
+
+        self.letter_dict = {}
+
+        for pos in range(len(letter_list)):
+            self.letter_dict[letter_list[pos]] = lowerr_list[pos]
         line_list = []
         self.actual_answer = []
         story = ""
@@ -39,29 +46,26 @@ class Word_Search2(Frame):
         self.story_txt.insert(0.0, story)
 
         Button(self, text="Check", bg="orange2", fg="black",
-               font="fixedsys 10", bd=5, command=self.check
-               ).grid(row=9, column=0, sticky=W)
+               font="Courier 10", bd=5, command=self.check
+               ).grid(row=15, column=0, sticky=W)
 
         if self.actual_answer[2] == "P":
             self.word_list = ["phoenix", "prophecy", "evil", "thestral", "darkness"]
         if self.actual_answer[17] == "M":
-            self.word_list = []
-        if self.actual_answer[31] == "E":
-            self.word_list = []
-            self.word_list = ["avox", "bow and arrow", "district twelve", "forcefield", "hunger games", "jabberjay",
-                              "mockingjay", "muttation", "nightlock berry", "panem"]
+            self.word_list = ["avox", "bow and arrow", "district twelve", "forcefield", "hunger games",
+                              "jabberjay", "mockingjay", "muttation", "nightlock berry", "panem"]
         if self.actual_answer[31] == "O":
-            self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite", "burn", "flame", "kindle", "spark",
-                              "smolder", "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
+            self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite",
+                              "burn", "flame", "kindle", "spark", "smolder",
+                              "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
 
         Label(self, text=" ", bg="orange2").grid(row=0, column=50, sticky=E)
-
-        word_count = 0
         row_count = 2
         column_count = 0
         for word in self.word_list:
-            if word_count % 5:
+            if column_count == 5:
                 row_count += 1
+                column_count = 0
             Label(self, text=word, bg="orange2",
                   ).grid(row=row_count, column=column_count, sticky=W)
             column_count += 1
@@ -72,3 +76,8 @@ class Word_Search2(Frame):
         for thing in answers:
             if thing != " " and thing != "\n":
                 answer_list.append(thing)
+
+        for pos in range(len(answer_list)):
+            if answer_list[pos] == "*":
+                if self.actual_answer[pos] != ".":
+                    print("yes")

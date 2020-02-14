@@ -13,16 +13,18 @@ class Instruction_page(Frame):
     def create_widgets(self):
         Label(self, text="").grid(row=0, column=0)
 
-        self.story_txt = Text(self, font="Verdana 20 bold", fg="Crimson", width=100, height=15, wrap=WORD)
-        self.story_txt.grid(row=0, column=1, columnspan=4)
+        self.story_txt = Text(self, font="Verdana 20 bold", fg="Crimson", width=100, height=19, wrap=WORD)
+        self.story_txt.grid(row=0, column=1, columnspan=5)
 
         instructions = ("Welcome to Phoenix Word Search!!!\n\n"
                         "Here you can challenge your brain by playing word search.\n\n\n"
                         "For Word Search, you can choose from three levels -- easy, medium, and hard.\n\n"
                         "When you find a word, replace all the letters of the word in the word search with an "
-                        "asterisk [*]. Then press the check button to see if you've found a word!\n"
+                        "\nasterisk [*]. Then press the check button to see if you've found a word!\n\n"
                         "Bonus! All three word searches have a theme of phoenixes and fire!\n\n"
-                        "When you're ready, click the 'home page' button to return to the home screen and "
+                        "If you change a letter that's not part of a word to an asterisk, then when \nthe word search "
+                        "resets, it will change to a different random letter. \n\nDon't get confused!\n\n"
+                        "When you're ready, click the 'home page' button to return to the home screen \nand "
                         "start your puzzle!\n\n"
                         "Can you solve them all?"
                         )
