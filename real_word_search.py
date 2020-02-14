@@ -14,12 +14,12 @@ class Word_Search2(Frame):
     def create_widgets(self):
 
         self.letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
-                            "S",
-                            "T", "U", "V", "W", "X", "Y", "Z"]
+                        "S",
+                        "T", "U", "V", "W", "X", "Y", "Z"]
         letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
-                       "T", "U", "V", "W", "X", "Y", "Z"]
+                   "T", "U", "V", "W", "X", "Y", "Z"]
         lowerr_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-                       "t", "u", "v", "w", "x", "y", "z"]
+                   "t", "u", "v", "w", "x", "y", "z"]
 
         self.letter_dict = {}
 
@@ -46,7 +46,7 @@ class Word_Search2(Frame):
             for char in line_list:
                 story += char
             line_list = []
-        self.story_txt = Text(self, width=45, height=17, wrap=WORD, font="Courier 18", bg="light salmon")
+        self.story_txt = Text(self, width=46, height=17, wrap=WORD, font="Courier 18", bg="light salmon")
         self.story_txt.grid(row=0, column=0, columnspan=4)
         self.story_txt.insert(0.0, story)
 
@@ -64,6 +64,7 @@ class Word_Search2(Frame):
         if self.actual_answer[17] == "M":
             self.word_list = ["avox", "bow and arrow", "district twelve", "forcefield", "hunger games", "jabberjay",
                               "mockingjay", "muttation", "nightlock berry", "panem"]
+            self.char_per_line -= 1
         if self.actual_answer[31] == "O":
             self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite", "burn", "flame", "kindle", "spark",
                               "smolder", "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
@@ -112,3 +113,4 @@ class Word_Search2(Frame):
 
     def quit(self):
         self.end_screen()
+

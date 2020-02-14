@@ -1,25 +1,71 @@
-import tkinter as tk
+from tkinter import *
 
 
-class ExampleApp(tk.Tk):
-    def __init__(self, end_screen):
-        tk.Tk.__init__(self)
-        self.end_screen = end_screen
-        self.label = tk.Label(self, text="", font="Courier 30", width=30)
-        self.label.pack()
-        self.remaining = 0
-        self.countdown(200)
+class End_Screen(Frame):
+    def __init__(self, master, exit_screen):
+        """Initialize Frame."""
+        self.exit_screen = exit_screen
+        super(End_Screen, self).__init__(master, background="coral")
+        self.grid()
+        self.create_widgets()
 
-    def countdown(self, remaining=None):
-        if remaining is not None:
-            self.remaining = remaining
+    def create_widgets(self):
+        Label(self, text="We hope you", font="Courier 40 bold", bg="orange2",
+              fg="firebrick3").grid(row=0, column=1, sticky=N)
 
-        if self.remaining <= 0:
-            self.label.configure(text="Time's up!", fg="orange")
-        else:
-            self.label.configure(text="Time Remaining: %d seconds" % self.remaining, fg="orange")
-            self.remaining = self.remaining - 1
-            self.after(1000, self.countdown)
+        Label(self, text="enjoyed playing", font="Courier 40 bold", bg="orange2",
+              fg="firebrick3").grid(row=1, column=1, sticky=N)
 
-        if self.remaining <= 0:
-            self.end_screen()
+        Label(self, text="Phoenix Word Search!", font="Courier 45 bold", bg="orange2",
+              fg="firebrick3").grid(row=2, column=1, sticky=N)
+
+        Label(self, text="", font="Courier 45 bold", bg="orange2",
+              fg="firebrick3").grid(row=3, column=1, sticky=N)
+
+        Button(self, text="Exit", bg="tomato", fg="black",
+               font="Courier 10 bold", bd=5, command=self.exit
+               ).grid(row=4, column=1, sticky=N)
+
+        imageSmall = PhotoImage(file="smallerPhoenix.gif")
+        w = Label(self,
+                  image=imageSmall
+                  ).grid(row=5, column=1, sticky=N)
+        w.photo = imageSmall
+
+    def exit(self):
+        self.exit_screen()
+
+
+from tkinter import *
+
+
+class End_Screen(Frame):
+    def __init__(self, master, exit_screen):
+        """Initialize Frame."""
+        self.exit_screen = exit_screen
+        super(End_Screen, self).__init__(master, background="lemon chiffon")
+        self.grid()
+        self.create_widgets()
+
+    def create_widgets(self):
+        Label(self, text="We hope you", font="Courier 40 bold", bg="lemon chiffon",
+              fg="dark goldenrod").grid(row=0, column=1, sticky=N)
+
+        Label(self, text="enjoyed playing", font="Courier 40 bold", bg="lemon chiffon",
+              fg="dark goldenrod").grid(row=1, column=1, sticky=N)
+
+        Label(self, text="Phoenix Word Search!\n", font="Courier 45 bold", bg="lemon chiffon",
+              fg="dark goldenrod").grid(row=2, column=1, sticky=N)
+
+        Button(self, text="Exit", bg="gold", fg="black",
+               font="Courier 14 bold", bd=5, command=self.exit
+               ).grid(row=3, column=1, sticky=N)
+
+        imageSmall = PhotoImage(file="smallerPhoenix copy.gif")
+        w = Label(self,
+                  image=imageSmall
+                  ).grid(row=4, column=1, sticky=N)
+        w.photo = imageSmall
+
+    def exit(self):
+        self.exit_screen()
