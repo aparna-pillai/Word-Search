@@ -13,10 +13,10 @@ class Instruction_page(Frame):
         self.story_txt = Text(font="fixedsys 12", fg="maroon", width=100, height=12, wrap=WORD)
         self.story_txt.grid(row=0, column=0, columnspan=4)
 
-        instructions = ("Welcome to Brain Puzzles and Fun Games!!!\n\n"
+        instructions = ("Welcome to Phoenix Puzzles: Fun Brain Games!!!\n\n"
                         "Here you can choose from three classic games: Word Search, Sudoku, and Crossword.\n\n"
                         "For Word Search, you can choose from three levels -- easy, medium, and hard.\n"
-                        "Bonus! All three crosswords have a theme of phoenixes and fire!\n\n"
+                        "Bonus! All three word searches have a theme of phoenixes and fire!\n\n"
                         "For Sudoku, you can choose from two levels and there is one crossword available to play.\n\n"
                         "When you're ready, click the 'home page' button to return to the home screen and "
                         "start your puzzle!\n\n"
@@ -29,6 +29,7 @@ class Instruction_page(Frame):
 
         Button(self, text="home",
                command=self.back_to_home,
+               font="fixedsys 10",
                fg="Light Gray",
                bg="maroon"
                ).grid(row=10, column=0, sticky=W)
