@@ -1,7 +1,6 @@
 from tkinter import *
 import random
 
-
 class Word_Search2(Frame):
     def __init__(self, master, text_file):
         """Initialize Frame."""
@@ -9,14 +8,16 @@ class Word_Search2(Frame):
         super(Word_Search2, self).__init__(master, background="orange2")
         self.grid()
         self.create_widgets()
-
     def create_widgets(self):
         letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
                        "T", "U", "V", "W", "X", "Y", "Z"]
         line_list = []
+        self.actual_answer = []
         story = ""
         for line in self.text_file:
-            print(line)
+            for char in line:
+                if char != " " and char != "\n":
+                    self.actual_answer.append(char)
             self.char_per_line = 0
             for char in line:
                 if char == ".":
@@ -45,11 +46,4 @@ class Word_Search2(Frame):
         answers = self.story_txt.get(0.0, END)
         for thing in answers:
             if thing != " " and thing != "\n":
-                answer_list.append(thing)
-        print(self.char_per_line)
-
-        for line in self.text_file:
-            print(line)
-        #     if char != " " and char!= "\n":
-        #         actual_answer_list.append(char)
-        # print(actual_answer_list)
+                 answer_list.append(thing)
