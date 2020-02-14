@@ -25,7 +25,7 @@ class End_Screen(Frame):
              font="Courier 10 bold", bd=5, command=self.exit
              ).grid(row=4, column=1, sticky=N)
 
-      imageSmall = PhotoImage(file="smallerPhoenixcopy.gif")
+      imageSmall = PhotoImage(file="smallerPhoenix copy.gif")
       w = Label(self,
                 image=imageSmall
                 ).grid(row=5, column=1,sticky=N)
