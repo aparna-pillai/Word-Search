@@ -15,42 +15,38 @@ class Home_page(Frame):
         Label(self, text="", bg="orange2"
               ).grid(row=0, column=0, sticky=N)
 
-        Label(self, text="Brain Games", font="Courier 40 bold", bg="orange2",
+        Label(self, text="Brain Puzzles", font="Courier 40 bold", bg="orange2",
               fg="firebrick3").grid(row=0, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=0, column=2, sticky=N)
 
         Label(self,
-              text="and", font="Courier 40 bold", bg="orange2",
+              text="and Fun Games", font="Courier 30 bold", bg="orange2",
               fg="firebrick3").grid(row=1, column=1, sticky=N)
 
         Label(self,
               text="Can you solve them all?", font="Courier 20 italic", bg="orange2",
               fg="firebrick3").grid(row=2, column=1, sticky=N)
 
-        Label(self,
-              text="Slogan", font="Times 30", bg="orange2",
-              fg="firebrick4").grid(row=3, column=1, sticky=N)
-
         Label(self, text="", bg="orange2",
               ).grid(row=4, column=2, sticky=N)
 
-        Button(self, text="Word Search", bg="orange2", fg="goldenrod",
+        Button(self, text="Word Search", bg="orange2", fg="black",
                font="Courier 25", bd=5, command=self.wordSearch
                ).grid(row=5, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=6, column=2, sticky=N)
 
-        Button(self, text="Sudoku", bg="orange2", fg="goldenrod",
+        Button(self, text="Sudoku", bg="orange2", fg="black",
                font="Courier 25", bd=5, command=self.Sudoku
                ).grid(row=7, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=8, column=2, sticky=N)
 
-        Button(self, text="Crossword", bg="orange2", fg="goldenrod",
+        Button(self, text="Crossword", bg="orange2", fg="black",
                font="Courier 25", bd=5, command=self.cross_word
                ).grid(row=10, column=1, sticky=N)
 
