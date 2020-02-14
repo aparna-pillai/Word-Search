@@ -14,8 +14,10 @@ class Instruction_page(Frame):
         self.story_txt.grid(row=0, column=0, columnspan=4)
 
         instructions = ("Welcome to Phoenix Puzzles: Fun Brain Games!!!\n\n"
-                        "Here you can choose from three classic games: Word Search, Sudoku, and Crossword.\n\n"
-                        "For Word Search, you can choose from three levels -- easy, medium, and hard.\n"
+                        "Here you can choose from three classic games: Word Search, Sudoku, and Crossword.\n\n\n"
+                        "For Word Search, you can choose from three levels -- easy, medium, and hard.\n\n"
+                        "When you find a word, replace all the letters of the word in the word search with an"
+                        "asterisk [*]. Then press the check button to see if you've found a word!\n"
                         "Bonus! All three word searches have a theme of phoenixes and fire!\n\n"
                         "For Sudoku, you can choose from two levels and there is one crossword available to play.\n\n"
                         "When you're ready, click the 'home page' button to return to the home screen and "
