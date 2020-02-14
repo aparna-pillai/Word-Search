@@ -4,7 +4,6 @@ from instructions import Instruction_page
 from wordSearch import Word_Search
 from real_word_search import Word_Search2
 
-
 class Game_Manager(object):
     def __init__(self):
         self.root = tkinter.Tk()
