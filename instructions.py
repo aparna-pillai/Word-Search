@@ -35,8 +35,7 @@ class Instruction_page(Frame):
         self.home_bttn = Button(self, text="home page", command=self.back_to_home)
 
         Button(self, text="Home Page",
-               font="fixedsys 20",
-               fg="light gray",
+               font="fixedsys 20", fg="light gray",
                bg="maroon",
                command=self.back_to_home
                ).grid(row=4, column=1, sticky=W)

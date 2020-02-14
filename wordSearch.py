@@ -43,11 +43,9 @@ class Word_Search(Frame):
 
     def load_file(self):
         file_name = self.file_ent.get()
-        print(file_name)
-        if file_name != "level1.txt" and file_name != "level2.txt" and file_name != "level3.txt": 
+        if file_name != "level1.txt" and file_name != "level2.txt" and file_name != "level3.txt":
             Label(self, text="Error: Not a valid file\nPlease re-enter file!", fg="white", bg="black"
                   ).grid(row=11, column=0, sticky=W)
         else:
             text_file = open(file_name, "r")
-            print(text_file)
             self.next_screen(text_file)

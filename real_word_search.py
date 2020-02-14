@@ -6,11 +6,12 @@ class Word_Search2(Frame):
     def __init__(self, master, text_file):
         """Initialize Frame."""
         self.text_file = text_file
-        super(Word_Search2, self).__init__(master, background="orange2")
+        super(Word_Search2, self).__init__(master, background="coral")
         self.grid()
         self.create_widgets()
 
     def create_widgets(self):
+
         self.letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
                             "S",
                             "T", "U", "V", "W", "X", "Y", "Z"]
@@ -44,12 +45,12 @@ class Word_Search2(Frame):
             for char in line_list:
                 story += char
             line_list = []
-        self.story_txt = Text(self, width=45, height=17, wrap=WORD)
+        self.story_txt = Text(self, width=45, height=17, wrap=WORD, font="Courier 18", bg="light salmon")
         self.story_txt.grid(row=0, column=0, columnspan=4)
         self.story_txt.insert(0.0, story)
 
-        Button(self, text="Check", bg="orange2", fg="black",
-               font="Courier 10", bd=5, command=self.check
+        Button(self, text="Check", bg="tomato", fg="black",
+               font="Courier 15 bold", bd=5, command=self.check
                ).grid(row=9, column=0, sticky=W)
 
         if self.actual_answer[2] == "P":
@@ -61,14 +62,14 @@ class Word_Search2(Frame):
             self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite", "burn", "flame", "kindle", "spark",
                               "smolder", "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
 
-        Label(self, text=" ", bg="orange2").grid(row=0, column=50, sticky=E)
+        Label(self, text=" ", bg="coral").grid(row=0, column=50, sticky=E)
         row_count = 2
         column_count = 0
         for word in self.word_list:
             if column_count == 5:
                 row_count += 1
                 column_count = 0
-            Label(self, text=word, bg="orange2",
+            Label(self, text=word, bg="coral", font="Courier 12"
                   ).grid(row=row_count, column=column_count, sticky=W)
             column_count += 1
 
