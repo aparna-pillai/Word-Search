@@ -11,6 +11,9 @@ class Word_Search2(Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        self.letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+                            "S",
+                            "T", "U", "V", "W", "X", "Y", "Z"]
         letter_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
                        "T", "U", "V", "W", "X", "Y", "Z"]
         lowerr_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
@@ -47,17 +50,16 @@ class Word_Search2(Frame):
 
         Button(self, text="Check", bg="orange2", fg="black",
                font="Courier 10", bd=5, command=self.check
-               ).grid(row=15, column=0, sticky=W)
+               ).grid(row=9, column=0, sticky=W)
 
         if self.actual_answer[2] == "P":
             self.word_list = ["phoenix", "prophecy", "evil", "thestral", "darkness"]
         if self.actual_answer[17] == "M":
-            self.word_list = ["avox", "bow and arrow", "district twelve", "forcefield", "hunger games",
-                              "jabberjay", "mockingjay", "muttation", "nightlock berry", "panem"]
+            self.word_list = ["avox", "bow and arrow", "district twelve", "forcefield", "hunger games", "jabberjay",
+                              "mockingjay", "muttation", "nightlock berry", "panem"]
         if self.actual_answer[31] == "O":
-            self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite",
-                              "burn", "flame", "kindle", "spark", "smolder",
-                              "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
+            self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite", "burn", "flame", "kindle", "spark",
+                              "smolder", "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
 
         Label(self, text=" ", bg="orange2").grid(row=0, column=50, sticky=E)
         row_count = 2
@@ -71,13 +73,33 @@ class Word_Search2(Frame):
             column_count += 1
 
     def check(self):
+        story = ""
+
         answer_list = []
         answers = self.story_txt.get(0.0, END)
         for thing in answers:
             if thing != " " and thing != "\n":
                 answer_list.append(thing)
-
+        char_count = 0
         for pos in range(len(answer_list)):
+            if char_count == self.char_per_line:
+                story += "\n"
+                char_count = 0
             if answer_list[pos] == "*":
                 if self.actual_answer[pos] != ".":
-                    print("yes")
+                    story += (self.letter_dict[self.actual_answer[pos]])
+                    story += " "
+                    char_count += 1
+
+                else:
+                    story += random.choice(self.letter_list)
+                    story += " "
+                    char_count += 1
+
+            else:
+                story += answer_list[pos]
+                story += " "
+                char_count += 1
+
+        self.story_txt.delete(0.0, END)
+        self.story_txt.insert(0.0, story)
