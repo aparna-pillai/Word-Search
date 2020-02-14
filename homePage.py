@@ -32,21 +32,21 @@ class Home_page(Frame):
         Label(self, text="", bg="orange2",
               ).grid(row=4, column=2, sticky=N)
 
-        Button(self, text="Word Search", bg="orange2", fg="black",
+        Button(self, text="Word Search", bg="maroon", fg="Light Gray",
                font="Courier 25", bd=5, command=self.wordSearch
                ).grid(row=5, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=6, column=2, sticky=N)
 
-        Button(self, text="Sudoku", bg="orange2", fg="black",
+        Button(self, text="Sudoku", bg="maroon", fg="Light Gray",
                font="Courier 25", bd=5, command=self.Sudoku
                ).grid(row=7, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=8, column=2, sticky=N)
 
-        Button(self, text="Crossword", bg="orange2", fg="black",
+        Button(self, text="Crossword", bg="maroon", fg="Light Gray",
                font="Courier 25", bd=5, command=self.cross_word
                ).grid(row=10, column=1, sticky=N)
 
