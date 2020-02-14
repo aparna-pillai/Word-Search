@@ -16,15 +16,15 @@ class Home_page(Frame):
         Label(self, text="", bg="orange2"
               ).grid(row=0, column=0, sticky=N)
 
-        Label(self, text="Phoenix Puzzles", font="Courier 40 bold", bg="orange2",
+        Label(self, text="Phoenix", font="Courier 50 bold", bg="orange2",
               fg="firebrick3").grid(row=0, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=0, column=2, sticky=N)
 
         Label(self,
-              text="Fun Brain Games", font="Courier 30 bold", bg="orange2",
-              fg="firebrick3").grid(row=1, column=1, sticky=N)
+              text="Word Searches", font="Courier 35 bold", bg="orange2",
+              fg="firebrick2").grid(row=1, column=1, sticky=N)
 
         Label(self,
               text="Can you solve them all?", font="Courier 20 italic", bg="orange2",

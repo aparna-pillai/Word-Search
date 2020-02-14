@@ -12,7 +12,7 @@ class Game_Manager(object):
         self.current_screen = None
 
     def load_page(self):
-        self.root.title("Phoenix Puzzles")
+        self.root.title("Phoenix Word Searches")
         self.current_screen = Home_page(self.root, self.instructions, self.word_search, self.sudoku, self.crossword)
 
     def instructions(self):
