@@ -32,7 +32,7 @@ class Word_Search2(Frame):
             for char in line_list:
                 story += char
             line_list = []
-        self.story_txt = Text(self, width=45, height=25, wrap=WORD)
+        self.story_txt = Text(self, width=45, height=17, wrap=WORD)
         self.story_txt.grid(row=0, column=0, columnspan=4)
         self.story_txt.insert(0.0, story)
 
@@ -40,9 +40,18 @@ class Word_Search2(Frame):
                font="Courier 10", bd=5, command=self.check
                ).grid(row=5, column=0, sticky=W)
 
+        if self.actual_answer[2] == "P":
+            self.word_list = []
+        if self.actual_answer[17] == "M":
+            self.word_list = []
+        if self.actual_answer[31] == "E":
+            self.word_list = []
+
+
+
+
     def check(self):
         answer_list = []
-        actual_answer_list = []
         answers = self.story_txt.get(0.0, END)
         for thing in answers:
             if thing != " " and thing != "\n":
