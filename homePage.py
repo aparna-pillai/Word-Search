@@ -14,14 +14,14 @@ class Home_page(Frame):
         Label(self, text="", bg="orange2"
               ).grid(row=0, column=0, sticky=N)
 
-        Label(self, text="Phoenix Puzzles", font="Courier 40 bold", bg="orange2",
+        Label(self, text="Phoenix", font="Courier 40 bold", bg="orange2",
               fg="firebrick3").grid(row=0, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=0, column=2, sticky=N)
 
         Label(self,
-              text="Fun Brain Games", font="Courier 30 bold", bg="orange2",
+              text="Word Search", font="Courier 30 bold", bg="orange2",
               fg="firebrick3").grid(row=1, column=1, sticky=N)
 
         Label(self,

@@ -16,7 +16,7 @@ class Instruction_page(Frame):
         self.story_txt = Text(self, font="Verdana 20 bold", fg="Crimson", width=100, height=15, wrap=WORD)
         self.story_txt.grid(row=0, column=1, columnspan=4)
 
-        instructions = ("Welcome to Phoenix Puzzles: Fun Brain Games!!!\n\n"
+        instructions = ("Welcome to Phoenix Word Search!!!\n\n"
                         "Here you can challenge your brain by playing word search.\n\n\n"
                         "For Word Search, you can choose from three levels -- easy, medium, and hard.\n\n"
                         "When you find a word, replace all the letters of the word in the word search with an "
@@ -34,7 +34,8 @@ class Instruction_page(Frame):
 
         Button(self, text="Home Page",
                font="fixedsys 20",
-               fg="Orangered",
+               fg="light gray",
+               bg="maroon",
                command=self.back_to_home
                ).grid(row=4, column=1, sticky=W)
 
