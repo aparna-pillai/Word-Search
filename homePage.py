@@ -30,7 +30,7 @@ class Home_page(Frame):
               fg="firebrick3").grid(row=2, column=1, sticky=N)
 
         Label(self,
-              text="Slogan", font="Courier 30", bg="orange2",
+              text="Slogan", font="Times 30", bg="orange2",
               fg="firebrick4").grid(row=3, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
