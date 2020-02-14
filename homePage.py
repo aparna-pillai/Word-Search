@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import Image, ImageTk, ImageFont, ImageDraw
 
 
 class Home_page(Frame):
@@ -13,6 +14,20 @@ class Home_page(Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        imagePIL = Image.open("e1f11c68f493c36538593420538bf451.png")
+        imageSmall = imagePIL.resize(600, 400)
+        draw = ImageDraw.Draw(imageSmall)
+        font = ImageFont.truetype("Courier bold", 40)
+        draw.text((20, 50), "Phoenix Puzzles", "firebrick3", font=font)
+        font = ImageFont.truetype(("Courier bold", 35))
+        draw.text((50, 50), "Fun Brain Games", "firebrick 3", font=font)
+        imageSmall.save("e1f11c68f493c36538593420538bf451.png")
+
+        image1 = Image.open("e1f11c68f493c36538593420538bf451.png")
+        photo = ImageTk.PhotoImage(image1)
+        bgLbl = Label(Home_page, image=photo)
+        bgLbl.place(x=0, y=0, relwidth=1, relheight=1)
+
         Label(self, text="", bg="orange2"
               ).grid(row=0, column=0, sticky=N)
 
