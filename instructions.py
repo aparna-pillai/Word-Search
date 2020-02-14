@@ -10,10 +10,10 @@ class Instruction_page(Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        self.story_txt = Text(font="fixedsys 12", fg="maroon", width=100, height=18, wrap=WORD)
+        self.story_txt = Text(font="fixedsys 12", fg="maroon", width=100, height=12, wrap=WORD)
         self.story_txt.grid(row=0, column=0, columnspan=4)
 
-        instructions = ("Welcome to Brain Puzzles and Fun Games!!!\n"
+        instructions = ("Welcome to Brain Puzzles and Fun Games!!!\n\n"
                         "Here you can choose from three classic games: Word Search, Sudoku, and Crossword.\n\n"
                         "For Word Search, you can choose from three levels -- easy, medium, and hard.\n"
                         "Bonus! All three crosswords have a theme of phoenixes and fire!\n\n"
@@ -25,11 +25,13 @@ class Instruction_page(Frame):
         self.story_txt.delete(0.0, END)
         self.story_txt.insert(0.0, instructions)
 
+        self.home_bttn = Button(self, text="home page", command=self.back_to_home)
+
         Button(self, text="home",
                command=self.back_to_home,
                fg="Light Gray",
                bg="maroon"
-               ).grid(row=5, column=0, sticky=W)
+               ).grid(row=10, column=0, sticky=W)
 
     def back_to_home(self):
         self.return_home()
