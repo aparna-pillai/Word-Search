@@ -9,16 +9,16 @@ class End_Screen(Frame):
       self.create_widgets()
 
   def create_widgets(self):
-      Label(self, text="We hope you", font="Courier 40 bold",
+      Label(self, text="We hope you", font="Courier 40 bold", bg="coral",
             fg="firebrick3").grid(row=0, column=1, sticky=N)
 
-      Label(self, text="enjoyed playing", font="Courier 40 bold",
+      Label(self, text="enjoyed playing", font="Courier 40 bold",bg="coral",
             fg="firebrick3").grid(row=1, column=1, sticky=N)
 
-      Label(self, text="Phoenix Word Search!", font="Courier 45 bold",
+      Label(self, text="Phoenix Word Search!", font="Courier 45 bold",bg="coral",
             fg="firebrick3").grid(row=2, column=1, sticky=N)
 
-      Label(self, text="", font="Courier 45 bold",
+      Label(self, text="", font="Courier 45 bold",bg="coral",
             fg="firebrick3").grid(row=3, column=1, sticky=N)
 
       Button(self, text="Exit", bg="tomato", fg="black",
