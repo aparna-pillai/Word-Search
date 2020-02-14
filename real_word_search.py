@@ -3,8 +3,9 @@ import random
 
 
 class Word_Search2(Frame):
-    def __init__(self, master, text_file):
+    def __init__(self, master, text_file, end_screen):
         """Initialize Frame."""
+        self.end_screen = end_screen
         self.text_file = text_file
         super(Word_Search2, self).__init__(master, background="coral")
         self.grid()
@@ -49,9 +50,14 @@ class Word_Search2(Frame):
         self.story_txt.grid(row=0, column=0, columnspan=4)
         self.story_txt.insert(0.0, story)
 
+        Label(self, text="", bg="coral", font="Courier 12"
+              ).grid(row=16, column=0, sticky=W)
         Button(self, text="Check", bg="tomato", fg="black",
                font="Courier 15 bold", bd=5, command=self.check
-               ).grid(row=9, column=0, sticky=W)
+               ).grid(row=17, column=1, sticky=E)
+        Button(self, text="Quit", bg="tomato", fg="black",
+               font="Courier 15 bold", bd=5, command=self.quit
+               ).grid(row=17, column=2, sticky=W)
 
         if self.actual_answer[2] == "P":
             self.word_list = ["phoenix", "prophecy", "evil", "thestral", "darkness"]
@@ -101,6 +107,8 @@ class Word_Search2(Frame):
                 story += answer_list[pos]
                 story += " "
                 char_count += 1
-
         self.story_txt.delete(0.0, END)
         self.story_txt.insert(0.0, story)
+
+    def quit(self):
+        self.end_screen()

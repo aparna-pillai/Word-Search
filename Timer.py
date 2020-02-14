@@ -8,7 +8,7 @@ class ExampleApp(tk.Tk):
         self.label = tk.Label(self, text="", font="Courier 30", width=30)
         self.label.pack()
         self.remaining = 0
-        self.countdown(10)
+        self.countdown(200)
 
     def countdown(self, remaining=None):
         if remaining is not None:
