@@ -29,7 +29,7 @@ class Word_Search(Frame):
 
         self.load_file_bttn = Button(self, text="Load", command=self.load_file,
                                      font="fixedsys 7", bg="maroon", fg="Light Gray"
-                                     ).grid(row=6, column=2, sticky=E)
+                                     ).grid(row=6, column=2, sticky=W)
 
     def load_file(self):
         file_name = self.file_ent.get()
