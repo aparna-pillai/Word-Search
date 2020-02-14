@@ -39,19 +39,36 @@ class Word_Search2(Frame):
         self.story_txt.insert(0.0, story)
 
         Button(self, text="Check", bg="orange2", fg="black",
-               font="Courier 10", bd=5, command=self.check
-               ).grid(row=5, column=0, sticky=W)
+               font="fixedsys 10", bd=5, command=self.check
+               ).grid(row=9, column=0, sticky=W)
 
         if self.actual_answer[2] == "P":
-            self.word_list = []
+            self.word_list = ["phoenix", "prophecy", "evil", "thestral", "darkness"]
         if self.actual_answer[17] == "M":
             self.word_list = []
         if self.actual_answer[31] == "E":
             self.word_list = []
+            self.word_list = ["avox", "bow and arrow", "district twelve", "forcefield", "hunger games", "jabberjay",
+                              "mockingjay", "muttation", "nightlock berry", "panem"]
+        if self.actual_answer[31] == "O":
+            self.word_list = ["ashes", "inferno", "phoenix", "blaze", "ignite", "burn", "flame", "kindle", "spark",
+                              "smolder", "smoke", "combust", "pyrokinetic", "incandescent", "heat"]
+
+        Label(self, text=" ", bg="orange2").grid(row=0, column=50, sticky=E)
+
+        word_count = 0
+        row_count = 2
+        column_count = 0
+        for word in self.word_list:
+            if word_count % 5:
+                row_count += 1
+            Label(self, text=word, bg="orange2",
+                  ).grid(row=row_count, column=column_count, sticky=W)
+            column_count += 1
 
     def check(self):
         answer_list = []
         answers = self.story_txt.get(0.0, END)
         for thing in answers:
             if thing != " " and thing != "\n":
-                 answer_list.append(thing)
+                answer_list.append(thing)
