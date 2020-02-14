@@ -47,4 +47,3 @@ class Word_Search2(Frame):
         for thing in answers:
             if thing != " " and thing != "\n":
                  answer_list.append(thing)
-
