@@ -28,7 +28,7 @@ class Word_Search(Frame):
        Label(self, text="", bg="black"
              ).grid(row=6, column=0, sticky=W)
 
-       Label(self, text="Load Cipher File:", bg="black", font="Courier 18", fg="orange"
+       Label(self, text="Load Word Search File:", bg="black", font="Courier 18", fg="orange"
              ).grid(row=7, column=0, sticky=W)
 
        self.file_ent = Entry(self, bg="black", fg="white")
@@ -43,6 +43,11 @@ class Word_Search(Frame):
 
    def load_file(self):
        file_name = self.file_ent.get()
-       text_file = open(file_name, "r")
-       self.next_screen(text_file)
+       print(file_name)
+       if file_name!="wordsearch_level1.txt" or file_name!="wordsearch_level2.txt" or file_name!="wordsearch_level3.txt":
+           Label(self,text="Error: Not a valid file\nPlease re-enter file!",fg="white",bg="black").grid(row=11,column=0, sticky=W)
+       else:
+           text_file = open(file_name, "r")
+           print(text_file)
+           self.next_screen(text_file)
 
