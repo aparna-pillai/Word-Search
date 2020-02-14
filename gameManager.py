@@ -1,5 +1,6 @@
 import tkinter
 from homePage import Home_page
+from instructions import Instruction_page
 from wordSearch import Word_Search
 from sudoku import Sudoku
 from real_word_search import Word_Search2
@@ -12,7 +13,15 @@ class Game_Manager(object):
 
     def load_page(self):
         self.root.title("Brain Games and Puzzles")
-        self.current_screen = Home_page(self.root, self.word_search, self.sudoku, self.crossword)
+        self.current_screen = Home_page(self.root, self.instructions, self.word_search, self.sudoku, self.crossword)
+
+    def instructions(self):
+        self.current_screen.destroy()
+        self.hedwig = Instruction_page(self.root, self.return_to_home)
+
+    def return_to_home(self):
+        self.hedwig.destroy()
+        self.current_screen = Home_page(self.root, self.instructions, self.word_search, self.sudoku, self.crossword)
 
     def word_search(self):
         self.current_screen.destroy()

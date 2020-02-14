@@ -2,8 +2,9 @@ from tkinter import *
 
 
 class Home_page(Frame):
-    def __init__(self, master, word_search, sudoku, crossword):
+    def __init__(self, master, instructions, word_search, sudoku, crossword):
         """Initialize Frame."""
+        self.instructions = instructions
         self.word_search = word_search
         self.sudoku = sudoku
         self.crossword = crossword
@@ -30,28 +31,38 @@ class Home_page(Frame):
               fg="firebrick3").grid(row=2, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
-              ).grid(row=4, column=2, sticky=N)
+              ).grid(row=3, column=2, sticky=N)
 
-        Button(self, text="Word Search", bg="orange2", fg="black",
+        Button(self, text="Instructions", bg="maroon", fg="Light Gray",
+               font="Courier 25", bd=5, command=self.instructions
+               ).grid(row=4, column=1, sticky=N)
+
+        Label(self, text="", bg="orange2",
+              ).grid(row=5, column=2, sticky=N)
+
+        Button(self, text="Word Search", bg="maroon", fg="Light Gray",
                font="Courier 25", bd=5, command=self.wordSearch
-               ).grid(row=5, column=1, sticky=N)
+               ).grid(row=6, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
-              ).grid(row=6, column=2, sticky=N)
+              ).grid(row=7, column=2, sticky=N)
 
-        Button(self, text="Sudoku", bg="orange2", fg="black",
+        Button(self, text="Sudoku", bg="maroon", fg="Light Gray",
                font="Courier 25", bd=5, command=self.Sudoku
-               ).grid(row=7, column=1, sticky=N)
+               ).grid(row=8, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
-              ).grid(row=8, column=2, sticky=N)
+              ).grid(row=9, column=2, sticky=N)
 
-        Button(self, text="Crossword", bg="orange2", fg="black",
+        Button(self, text="Crossword", bg="maroon", fg="Light Gray",
                font="Courier 25", bd=5, command=self.cross_word
                ).grid(row=10, column=1, sticky=N)
 
         Label(self, text="", bg="orange2",
               ).grid(row=11, column=2, sticky=N)
+
+    def instructions(self):
+        self.instructions()
 
     def wordSearch(self):
         self.word_search()
