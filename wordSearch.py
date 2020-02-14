@@ -10,34 +10,35 @@ class Word_Search(Frame):
         self.choosing_widgets()
 
     def choosing_widgets(self):
-        Label(self, text="Choose your level!", font="Courier 28", fg="red", bg="black").grid(row=1, column=0, sticky=W)
+        Label(self, text="Choose your level!", font="Courier 28", fg="crimson", bg="black").grid(row=1, column=0,
+                                                                                                 sticky=W)
 
         Label(self, text="", bg="black"
               ).grid(row=2, column=0, sticky=W)
 
-        Label(self, text="Easy: wordsearch_level1.txt", bg="black", fg="orangered", font="Courier 22"
+        Label(self, text="Easy: wordsearch_level1.txt", bg="black", fg="red", font="Courier 22"
               ).grid(row=3, column=0, columnspan=4, sticky=W)
 
-        Label(self, text="Medium: wordsearch_level2.txt", bg="black", fg="tomato", font="Courier 22"
+        Label(self, text="Medium: wordsearch_level2.txt", bg="black", fg="orangered", font="Courier 22"
               ).grid(row=4, column=0, columnspan=4, sticky=W)
 
-        Label(self, text="Hard: wordsearch_level3.txt", bg="black", fg="orange", font="Courier 22"
+        Label(self, text="Hard: wordsearch_level3.txt", bg="black", fg="tomato", font="Courier 22"
               ).grid(row=5, column=0, columnspan=4, sticky=W)
 
         Label(self, text="", bg="black"
               ).grid(row=6, column=0, sticky=W)
 
-        Label(self, text="Load Cipher File:", bg="black", font="Courier 18", fg="gold"
+        Label(self, text="Load Cipher File:", bg="black", font="Courier 18", fg="orange"
               ).grid(row=7, column=0, sticky=W)
 
-        self.file_ent = Entry(self, bg="black")
+        self.file_ent = Entry(self, bg="black", fg="white")
         self.file_ent.grid(row=8, column=0, sticky=W)
 
         Label(self, text="", bg="black"
               ).grid(row=9, column=0, sticky=W)
 
         self.load_file_bttn = Button(self, text="Load", command=self.load_file,
-                                     bg="black", fg="yellow", font="Courier 18"
+                                     bg="black", fg="gold", font="Courier 18"
                                      ).grid(row=10, column=0, sticky=W)
 
     def load_file(self):
