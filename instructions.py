@@ -10,7 +10,7 @@ class Instruction_page(Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        self.story_txt = Text(font="fixedsys 12", fg="maroon", width=100, height=20, wrap=WORD)
+        self.story_txt = Text(font="fixedsys 12", fg="maroon", width=100, height=18, wrap=WORD)
         self.story_txt.grid(row=0, column=0, columnspan=4)
 
         instructions = ("Welcome to Brain Puzzles and Fun Games!!!\n"
