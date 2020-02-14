@@ -41,11 +41,11 @@ class Word_Search2(Frame):
                ).grid(row=5, column=0, sticky=W)
 
         if self.actual_answer[2] == "P":
-            self.word_list = open("level1_words.txt", "r")
+            self.word_list = []
         if self.actual_answer[17] == "M":
-            self.word_list = open("level2_words.txt", "r")
+            self.word_list = []
         if self.actual_answer[31] == "E":
-            self.word_list = open("level3_words.txt", "r")
+            self.word_list = []
 
 
 
