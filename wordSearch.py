@@ -28,28 +28,26 @@ class Word_Search(Frame):
         Label(self, text="", bg="black"
               ).grid(row=6, column=0, sticky=W)
 
-        Label(self, text="Load Cipher File:", bg="black", font="Courier 18", fg="orange"
+        Label(self, text="Load Word Search File:", bg="black", font="Courier 18", fg="orange"
               ).grid(row=7, column=0, sticky=W)
 
         self.file_ent = Entry(self, bg="black", fg="white")
         self.file_ent.grid(row=8, column=0, sticky=W)
 
-        self.file_list = ["level1.txt", "level2.txt", "level3.txt"]
-
         Label(self, text="", bg="black"
-              ).grid(row=10, column=0, sticky=W)
+              ).grid(row=9, column=0, sticky=W)
 
         self.load_file_bttn = Button(self, text="Load", command=self.load_file,
                                      bg="black", fg="gold", font="Courier 18"
-                                     ).grid(row=11, column=0, sticky=W)
+                                     ).grid(row=10, column=0, sticky=W)
 
     def load_file(self):
-        if self.file_ent not in self.file_list:
-            Label(self, text="That is not a file. Try again.", bg="black", fg="white"
-                  ).grid(row=9, column=0, sticky=W)
-            self.file_ent.delete(0, 'end')
+        file_name = self.file_ent.get()
+        print(file_name)
+        if file_name != "level1.txt" and file_name != "level2.txt" and file_name != "level3.txt": 
+            Label(self, text="Error: Not a valid file\nPlease re-enter file!", fg="white", bg="black"
+                  ).grid(row=11, column=0, sticky=W)
         else:
-            file_name = self.file_ent.get()
             text_file = open(file_name, "r")
+            print(text_file)
             self.next_screen(text_file)
-

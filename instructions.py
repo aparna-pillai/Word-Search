@@ -13,7 +13,7 @@ class Instruction_page(Frame):
     def create_widgets(self):
         Label(self, text="").grid(row=0, column=0)
 
-        self.story_txt = Text(self, font="Verdana 20 bold", fg="Crimson", width=100, height=19, wrap=WORD)
+        self.story_txt = Text(self, font="Verdana 20 bold", fg="Crimson", width=100, height=22, wrap=WORD)
         self.story_txt.grid(row=0, column=1, columnspan=5)
 
         instructions = ("Welcome to Phoenix Word Search!!!\n\n"
@@ -26,7 +26,7 @@ class Instruction_page(Frame):
                         "resets, it will change to a different random letter. \n\nDon't get confused!\n\n"
                         "When you're ready, click the 'home page' button to return to the home screen \nand "
                         "start your puzzle!\n\n"
-                        "Can you solve them all?"
+                        "Can you beat the clock and solve them all?"
                         )
 
         self.story_txt.delete(0.0, END)
