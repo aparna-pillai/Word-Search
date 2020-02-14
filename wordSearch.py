@@ -30,7 +30,7 @@ class Word_Search(Frame):
         Label(self, text="Load Cipher File:", bg="black", font="Courier 18",fg="gold"
               ).grid(row=7, column=0, sticky=W)
 
-        self.file_ent = Entry(self,bg="black")
+        self.file_ent = Entry(self,bg="black",font="white")
         self.file_ent.grid(row=8, column=0, sticky=W)
 
         Label(self, text="", bg="black"
