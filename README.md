@@ -22,5 +22,7 @@ Don't get confused!
 When you're ready, click the 'home page' button to return to the home screen and start your puzzle!
 
 Can you beat the clock and solve them all?
+____________________________________________________________________________________________________________________________________________________________________
 
+Run 
 The level files are level1.txt, level2.txt, and level3.txt. 
