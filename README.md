@@ -24,5 +24,6 @@ When you're ready, click the 'home page' button to return to the home screen and
 Can you beat the clock and solve them all?
 ____________________________________________________________________________________________________________________________________________________________________
 
-Run 
+Run gameManager.py
+
 The level files are level1.txt, level2.txt, and level3.txt. 
